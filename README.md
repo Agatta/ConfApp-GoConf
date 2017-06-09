@@ -1,2 +1,10 @@
 # ConfApp-GoConf
-Na razie jeden katalog tylko na szablony, na aplikacje utworzymy sobie oddzielny, mozemy też na inne rzeczy jesli zajdzie potrzeba.
+
+Uruchomienie aplikacji:
+Wymagania systemowe: 
+-Zainstalowane i skomfigurowane JDK (Path)
+-Maven https://maven.apache.org/install.html
+
+
+Uruchomienie: 
+Z katalogu springbootApp w konsoli: mvn spring-boot:run
