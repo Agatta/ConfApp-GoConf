@@ -1,13 +1,20 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<html lang="pl">
-	<head>
-		<meta charset="UTF-8">
-		<title>BootJS</title>
-		<link type="text/css" rel="stylesheet" href="style.css">
-	</head>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<body>
-	Witaj ${name} lista artykułów: <a href="/list-papers">Artykuły</a>
-</body>
+<t:baseTemplate title="Login">
 
-</html>
+
+<jsp:attribute name="nav_area">
+		<li class="navbar-text">Witaj ${name}</li>
+	</jsp:attribute>
+
+    <jsp:attribute name="content_area">
+		<div class="container">
+			<p><a href="/list-papers">Artykuły</a></p>
+
+		</div>
+
+	</jsp:attribute>
+
+</t:baseTemplate>
