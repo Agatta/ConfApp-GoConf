@@ -1,14 +1,21 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<!DOCTYPE html>
-<html>
-<body>
+<%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<h1>Spring Boot ładowanie plików</h1>
+<t:baseTemplate title="Upload">
+    <jsp:attribute name="content_area">
+    <div class="container">
+        <h1>Wybierz plik</h1>
 
-<form method="POST" action="/upload" enctype="multipart/form-data">
-    <input type="file" name="file" /><br/><br/>
-    <input type="submit" value="Submit" />
-</form>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <input type="file" name="file" /><br/><br/>
+            <input type="submit" value="Submit" />
+        </form>
 
-</body>
-</html>
+
+    </div>
+    </jsp:attribute>
+
+
+
+</t:baseTemplate>
