@@ -5,11 +5,19 @@
 <t:baseTemplate title="Upload">
     <jsp:attribute name="content_area">
     <div class="container">
-        <h1>Wybierz plik</h1>
+        <h1>Dodaj plik .pdf</h1>
 
         <form method="POST" action="/upload" enctype="multipart/form-data">
-            <input type="file" name="file" /><br/><br/>
-            <input type="submit" value="Submit" />
+
+                <div class="form-group"><label class="btn btn-primary">
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                    Wybierz plik
+                    <input type="file"  name="file"  hidden style="display: none;" onchange='$("#upload-file-info").html(($(this)[0].files[0].name));'>
+                </label> <span id="upload-file-info"></span></div>
+                <div class="form-group">   <button type="submit" class="btn btn-success"> Wyślij</button></div>
+
+
+
         </form>
 
 
