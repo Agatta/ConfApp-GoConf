@@ -8,3 +8,9 @@ Wymagania systemowe:
 
 Uruchomienie: 
 Z katalogu springbootApp w konsoli: mvn spring-boot:run
+
+Aplikacja uruchomi się na http://localhost:8080/index
+
+Przykładowe dane do logowania:
+login: profDummy1
+haslo: ala
