@@ -47,9 +47,11 @@
                     <a class="navbar-brand" href="#">ITConf</a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                    <div class="navbar-form navbar-right">
+                        <div class="form-group"></div>
                         <jsp:invoke fragment="nav_area"/>
-                    </ul>
+
+                </div>
                 </div><!-- /.nav-collapse -->
             </div><!-- /.container -->
         </nav><!-- /.navbar -->

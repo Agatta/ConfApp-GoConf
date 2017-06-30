@@ -6,13 +6,15 @@
 
 
 <jsp:attribute name="nav_area">
-		<li class="navbar-text">Witaj ${name}</li>
-	</jsp:attribute>
+		<span class="navbar-text">Witaj ${name}</span> <a href="/login" class="btn btn-warning"><span class="glyphicon glyphicon-log-out"></span> Wyloguj</a>
+</jsp:attribute>
 
 	<jsp:attribute name="content_area">
 <div class="container">
+	<h2>Artykuły</h2>
+	<hr>
 	<table class="table table-striped">
-		<caption> Artykuły</caption>
+
 		<thead>
 		<tr>
 			<th>Autor</th>
@@ -33,15 +35,15 @@
 			<td>${paper.desc}</td>
 			<td>${paper.status}</td>
 			<td><a type="button" class="btn btn-warning"
-				   href="/delete-paper?id=${paper.id}">Usuń</a></td>
+				   href="/delete-paper?id=${paper.id}"><span class="glyphicon glyphicon-remove"></span> Usuń</a></td>
 			<td><a type="button" class="btn btn-success"
-				   href="/ala?id=${paper.id}">Plik</a></td>
+				   href="/ala?id=${paper.id}"><span class="glyphicon glyphicon-plus"></span> Dodaj</a></td>
 		</tr>
 </c:forEach>
 		</tbody>
 	</table>
-	<a type="button" class="btn btn-success"
-	   href="/add-paper">Dodaj artykuł</a>
+	<a type="button" class="btn btn-primary"
+	   href="/add-paper"><span class="glyphicon glyphicon-plus"></span> Dodaj artykuł</a>
 
 
 </div>

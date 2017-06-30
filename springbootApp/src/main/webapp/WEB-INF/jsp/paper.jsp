@@ -6,7 +6,7 @@
 
 
 <jsp:attribute name="nav_area">
-		<li class="navbar-text">Witaj ${name}</li>
+		Witaj ${name}
 	</jsp:attribute>
 
 	<jsp:attribute name="content_area">

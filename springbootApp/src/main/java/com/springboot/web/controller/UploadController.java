@@ -23,7 +23,7 @@ public class UploadController {
 	@Autowired
 	confPaperService service;
     //Save the uploaded file to this folder
-    private static String UPLOADED_FOLDER = "C:/luk/spring_boot/tmp/";
+    private static String UPLOADED_FOLDER = "C:/";
 
     @GetMapping("/ala")
     public String index(@RequestParam int id) {
@@ -46,15 +46,21 @@ public class UploadController {
             byte[] bytes = file.getBytes();
             Path path = Paths.get(UPLOADED_FOLDER + file.getOriginalFilename());
             Files.write(path, bytes);
-
             redirectAttributes.addFlashAttribute("message",
                     "You successfully uploaded '" + file.getOriginalFilename() + "'");
+
+            return "redirect:/uploadStatus";
       
         } catch (IOException e) {
             e.printStackTrace();
+            redirectAttributes.addFlashAttribute("message", "Nie udało sie dodać pliku");
+
+            return "redirect:/uploadStatus";
         }
 
-        return "redirect:/uploadStatus";
+
+
+
     }
 
     @GetMapping("/uploadStatus")

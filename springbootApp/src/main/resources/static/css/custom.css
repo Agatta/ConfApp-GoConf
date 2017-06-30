@@ -23,3 +23,16 @@
 
     min-height: 500px;
 }
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    font-size: 30px;
+}
+
+.navbar-inverse  .navbar-text {
+    font-weight: bold;
+    color:#fefefe;
+}
+.navbar-form .btn {
+    margin-top: 8px;
+}
